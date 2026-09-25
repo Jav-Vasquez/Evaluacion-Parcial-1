@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de café, té orgánico y accesorios de Roots & Beans">
+    <title>Roots & Beans - Productos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+        <a href="index.html"><img src="img/logo.png" alt="Logo Roots & Beans" class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html" class="activo">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="productos.html#carrito">Carrito (<span id="contador-carrito">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-principal">
+        <section>
+            <h1>Catálogo de productos</h1>
+            <p>Café en grano, té orgánico y accesorios para preparar tu café.</p>
+            <!-- aqui se cargan los productos desde productos.js -->
+            <div id="contenedor-productos" class="grid-productos"></div>
+        </section>
+
+    
+        <section id="carrito">
+            <h2>Carrito de compras</h2>
+            <ul id="lista-carrito"></ul>
+            <p>Total: $<span id="total-carrito">0</span></p>
+            <button id="btn-vaciar">Vaciar carrito</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Roots & Beans - Café y té de comercio justo</p>
+        <p>Correo: contacto@rootsandbeans.cl | Santiago, Chile</p>
+        <ul>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+        </ul>
+        <p>&copy; 2026 Roots & Beans. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/productos.js"></script>
+</body>
+</html>
