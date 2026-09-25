@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacto de Roots & Beans">
+    <title>Roots & Beans - Contacto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html"><img src="img/logo.png" alt="Logo Roots & Beans" class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html" class="activo">Contacto</a></li>
+                <li><a href="productos.html#carrito">Carrito (<span id="contador-carrito">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contacto">
+            <h1>Contáctanos</h1>
+            <p>Si tienes alguna duda o comentario déjanos tu mensaje y te responderemos lo antes posible.</p>
+
+        
+                <div class="campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" maxlength="100" placeholder="Ej: Juan Pérez" required>
+                    <span class="error" id="error-nombre"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" maxlength="100" placeholder="ejemplo@duoc.cl" required>
+                    <small>Solo se aceptan correos @duoc.cl, @profesor.duoc.cl y @gmail.com</small>
+                    <span class="error" id="error-correo"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="motivo">Motivo</label>
+                    <select id="motivo" name="motivo">
+                        <option value="">Selecciona una opción</option>
+                        <option value="consulta">Consulta</option>
+                        <option value="pedido">Pedido</option>
+                        <option value="reclamo">Reclamo</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Comentario</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" maxlength="500" placeholder="Escribe tu mensaje aquí" required></textarea>
+                    <span class="error" id="error-mensaje"></span>
+                </div>
+
+                <button type="submit" class="btn">Enviar</button>
+                <p id="mensaje-exito"></p>
+            </form>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>Roots & Beans - Café y té de comercio justo</p>
+        <p>Correo: contacto@rootsandbeans.cl | Santiago, Chile</p>
+        <ul>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+        </ul>
+        <p>&copy; 2026 Roots & Beans. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/contacto.js"></script>
+</body>
+</html>
