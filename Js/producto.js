@@ -1,12 +1,12 @@
 const productos = [
-  { id: 1, nombre: "Café Etiopía", precio: 12000, imagen: "img/cafe-etiopia.jpg" },
-  { id: 2, nombre: "Café Huila", precio: 11000, imagen: "img/cafe-huila.jpg" },
-  { id: 3, nombre: "Café Perú", precio: 11500, imagen: "img/cafe-peru.jpg" },
-  { id: 4, nombre: "Té Sencha", precio: 8000, imagen: "img/te-sencha.jpg" },
-  { id: 5, nombre: "Té Chai", precio: 8500, imagen: "img/te-chai.jpg" },
-  { id: 6, nombre: "Prensa Francesa", precio: 15000, imagen: "img/prensa-francesa.jpg" },
-  { id: 7, nombre: "Kit Pour Over", precio: 18000, imagen: "img/kit-pour-over.jpg" },
-  { id: 8, nombre: "Termo", precio: 9000, imagen: "img/termo.jpg" },
+  { id: 1, nombre: "Café Etiopía", precio: 12000, imagen: "Img/cafe-etiopia.jpg" },
+  { id: 2, nombre: "Café Huila", precio: 11000, imagen: "Img/cafe-huila.jpg" },
+  { id: 3, nombre: "Café Perú", precio: 11500, imagen: "Img/cafe-peru.jpg" },
+  { id: 4, nombre: "Té Sencha", precio: 8000, imagen: "Img/te-sencha.jpg" },
+  { id: 5, nombre: "Té Chai", precio: 8500, imagen: "Img/te-chai.jpg" },
+  { id: 6, nombre: "Prensa Francesa", precio: 15000, imagen: "Img/prensa-francesa.jpg" },
+  { id: 7, nombre: "Kit Pour Over", precio: 18000, imagen: "Img/kit-pour-over.jpg" },
+  { id: 8, nombre: "Termo", precio: 9000, imagen: "Img/termo.jpg" },
 ];
 
 let carrito = [];
@@ -24,7 +24,7 @@ function mostrarProductos(idContenedor, cantidad) {
       <div class="tarjeta-producto">
         <img src="${p.imagen}" alt="${p.nombre}">
         <h3>${p.nombre}</h3>
-        <p>$${p.precio}</p>
+        <p class="precio">$${p.precio}</p>
         <button onclick="agregarAlCarrito(${p.id})">Añadir al carrito</button>
       </div>
     `;
@@ -38,8 +38,11 @@ function agregarAlCarrito(id) {
   total = total + producto.precio;
 
   document.getElementById("contador-carrito").textContent = carrito.length;
-  document.getElementById("total-carrito").textContent = total;
-  document.getElementById("lista-carrito").innerHTML += "<li>" + producto.nombre + " - $" + producto.precio + "</li>";
+
+  if (document.getElementById("lista-carrito")) {
+    document.getElementById("total-carrito").textContent = total;
+    document.getElementById("lista-carrito").innerHTML += "<li>" + producto.nombre + " - $" + producto.precio + "</li>";
+  }
 }
 
 function vaciarCarrito() {
